@@ -124,7 +124,7 @@ dnsmasq_conf_clear_on_reload: True
 # address->name queries for 192.168.3/24 to nameserver 10.1.2.3
 # ['3.168.192.in-addr.arpa', '10.1.2.3']
 #dnsmasq_conf_servers:
-#  - [ "/google.com/", "8.8.8.8" ]
+#  - [ "google.com", "8.8.8.8" ]
 #  - "8.8.4.4"
 dnsmasq_conf_servers: [ "8.8.8.8", "8.8.4.4" ]
 
