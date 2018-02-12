@@ -119,12 +119,18 @@ dnsmasq_conf_no_poll: False
 dnsmasq_conf_clear_on_reload: True
 
 # Specify IP address of upstream servers directly. Setting this flag does not
-# suppress reading of /etc/resolv.conf: ['localnet', '192.168.0.1']
+# suppress reading of /etc/resolv.conf: 
+# - domain: "localnet"
+#   server: "192.168.0.1"
+#
 # Example of routing PTR queries to nameservers: this will send all:
 # address->name queries for 192.168.3/24 to nameserver 10.1.2.3
-# ['3.168.192.in-addr.arpa', '10.1.2.3']
+# - domain: "3.168.192.in-addr.arpa"
+#   server: "10.1.2.3"
+# 
 #dnsmasq_conf_servers:
-#  - [ "google.com", "8.8.8.8" ]
+#  - domain: "google.com"
+#    server: "8.8.8.8"
 #  - "8.8.4.4"
 dnsmasq_conf_servers: [ "8.8.8.8", "8.8.4.4" ]
 
