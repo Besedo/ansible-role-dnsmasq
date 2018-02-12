@@ -182,7 +182,7 @@ mx-target={{ dnsmasq_conf_mx }}
 {% if server is string -%}
 local={{ server }}
 {% else %}
-server={{ server | join(',') }}
+server={{ server | join('') }}
 {% endif %}
 {% endfor %}
 {% endif %}
